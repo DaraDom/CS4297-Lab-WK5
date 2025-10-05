@@ -44,10 +44,9 @@ Edit `src/main/resources/application.properties`:
 
 ```properties
 spring.application.name=async-microservice
-server.port=8081
 
 aws.region=YOUR_REGION
-aws.sqs.queue-url=https://sqs.eu-north-1.amazonaws.com/YOUR_ACCOUNT/YOUR_QUEUE
+aws.sqs.queue-url=YOUR_QUEUE_URL
 aws.dynamodb.table-name=JobTable
 ```
 
@@ -80,7 +79,7 @@ GET http://localhost:8080/export
 ### Asynchronous Task (Step 2+)
 
 ```bash
-POST http://localhost:8081/tasks
+POST http://localhost:8080/tasks
 Content-Type: application/json
 
 {}
